@@ -9,4 +9,8 @@ python은 C언어로 구현되었다는 얘기를 들어보았을 것이다.
 그다음 가상환경(Virtual Machine)에 의해 Machine Language로 변경된다.
 
 결과적으로
-**Python Script(.py) -> Byte Code(.cpy) -> Machine Language** 의 과정
+**Python Script(.py) -> Byte Code(.cpy) -> Machine Language**의 과정을 거친다.
+
+ByteCode로 변환하는 이유는 자바가 그렇듯 
+ByteCode를 VM이 독립적으로 실행하므로써 OS에 제약받지 않는 장점 때문이다.
+(Python Script 보다 빠르기 때문이기도 하다.)
