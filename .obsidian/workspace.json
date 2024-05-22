@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-05-22.md",
+                "file": "MySQL/Architecture/Architecture.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-05-22.md",
+                "file": "MySQL/Architecture/Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-05-22.md",
+                "file": "MySQL/Architecture/Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-05-22.md"
+                "file": "MySQL/Architecture/Architecture.md"
               }
             }
           }
@@ -171,16 +170,16 @@
   },
   "active": "e2abac34e37d6dd3",
   "lastOpenFiles": [
-    "2024-05-22.md",
-    "무제 파일.canvas",
-    "무제 파일.md",
-    "README.md",
     "MLOps/MLOps.md",
+    "MySQL/Architecture/Architecture.md",
+    "README.md",
+    "무제 파일.canvas",
+    "2024-05-22.md",
+    "무제 파일.md",
     "img/mlops-cycle.png",
     "img/MySQL 쿼리 실행 방식.jpeg",
     "img/MySQL 전체 아키텍쳐도.jpeg",
     "MLOps",
-    "MySQL/Architecture/Architecture.md",
     "MySQL/Architecture/MySQL 쿼리 동작.md",
     "MySQL/Architecture/Engine/MySQL Engine.md",
     "MySQL/Architecture/Engine/Storage Engine.md",
