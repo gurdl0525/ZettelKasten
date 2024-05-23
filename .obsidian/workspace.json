@@ -16,6 +16,18 @@
             }
           },
           {
+            "id": "74525baeaa55ba87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MLOps/MLOps.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "e2abac34e37d6dd3",
             "type": "leaf",
             "state": {
@@ -29,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MLOps/Python/Python.md",
+                "file": "MLOps/Python/Compile 방식.md",
                 "mode": "source",
                 "source": false
               }
@@ -197,13 +209,14 @@
   },
   "active": "32d95a7a754c5236",
   "lastOpenFiles": [
+    "MLOps/Python/Compile 방식.md",
+    "MLOps/MLOps.md",
+    "MLOps/Python/Python.md",
     "MySQL/Architecture/Handler API.md",
     "MySQL/MySQL.md",
-    "MLOps/Python/Python.md",
     "MLOps/Python/__init__.py.md",
     "MLOps/Python/if __name__ == '__main__'.md",
     "MySQL/Architecture/Architecture.md",
-    "MLOps/MLOps.md",
     "img/Python Compile 과정.png",
     "MLOps/Python",
     "README.md",
