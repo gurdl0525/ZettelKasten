@@ -1,7 +1,7 @@
 **Asynchronous Server Gateway Interface**란?
 
 ASGL. 즉, 비동기를 사용하는 web server를 의미한다. (동기는 WSGL)
-- callback, [[Promise]], async / await 구문을 사용
+- callback, Promise, async / await 구문을 사용
 ![[ASGI.png]]
 
 
@@ -13,3 +13,19 @@ ASGL. 즉, 비동기를 사용하는 web server를 의미한다. (동기는 WSGL
 
 이때 `Task2`는 정상적으로 수행하다가 `Get Data from Server`가 필요한 시점에
 `Get Data from Server`가 종료 되었다면 다음 동작을 실행하는 것이고, 아니라면 기다리는 것이다.
+
+이를 JS Code로 보면 다음과 같다.
+```javascript
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("완료!"), 1000)
+  });
+
+  let result = await promise; // 프라미스가 이행될 때까지 기다림 (*)
+
+  alert(result); // "완료!"
+}
+
+f();
+```
