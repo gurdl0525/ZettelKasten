@@ -29,3 +29,58 @@ async function f() {
 
 f();
 ```
+
+그럼 await하지 않은 순간에는 병렬처리가 가능한가?
+이는 Python 코드로 알아보겠다
+```python
+import asyncio  
+  
+  
+async def example2() -> int:  
+    for i in ['A', 'B', 'C', 'D', 'E']:  
+        print(i)  
+  
+    return 1248124  
+  
+  
+async def example():  
+    res = example2()  
+  
+    for i in range(5):  
+        print(i)  
+  
+    print(await res)
+  
+asyncio.run(example())
+```
+
+위 코드에서는 example2()을 호출한 순간 부터 A, B, C...등의 print가 시작되고
+동시에 0, 1, 2...도 print 되는지, res값이 await를 통해 정상적으로 반환 되는지를 의도했다.
+
+단 예상과 달리 output은 다음과 같았다.
+```console
+0
+1
+2
+3
+4
+A
+B
+C
+D
+E
+1248124
+```
+
+왜 이런 결과가 나왔을까?
+이는 **[[이벤트 루프]]**를 이해한다면 알 수 있다.
+
+이벤트 루프는 이벤트를 순회 하면서 처리한다는 것을 알 수 있다.
+
+즉 A, B, C...를 print하는 example2라는 이벤트 또한 등록이 되었으나 
+그 전에 이미 등록된 example 이벤트가 먼저 처리되고 있어서 0, 1, 2...가 먼저 print된다.
+
+후에 example이 종료된 후에 event loop는 event queue에 등록되어있던 example2를 처리하므로
+위 output과 같은 결과값이 나오는 것이다.
+
+두 함수를 동시에 실행 시키려면 다음과 같은 방법이 있다.
