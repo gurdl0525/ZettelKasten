@@ -11,20 +11,20 @@
             "id": "32d95a7a754c5236",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "MySQL/Architecture/Handler API.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
             "id": "e2abac34e37d6dd3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MySQL/Architecture/Architecture.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -63,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -187,14 +188,16 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "32d95a7a754c5236",
+  "active": "e2abac34e37d6dd3",
   "lastOpenFiles": [
+    "MySQL/MySQL.md",
+    "MySQL/Architecture/Handler API.md",
+    "MySQL/Architecture/Architecture.md",
+    "MLOps/MLOps.md",
     "MLOps/Python/__init__.py.md",
     "MLOps/Python/Python.md",
     "img/Python Compile 과정.png",
     "MLOps/Python",
-    "MySQL/Architecture/Architecture.md",
-    "MLOps/MLOps.md",
     "README.md",
     "무제 파일.canvas",
     "2024-05-22.md",
@@ -206,8 +209,6 @@
     "MySQL/Architecture/Engine/MySQL Engine.md",
     "MySQL/Architecture/Engine/Storage Engine.md",
     "MySQL/Architecture/MySQL Threading 구조.md",
-    "MySQL/MySQL.md",
-    "MySQL/Architecture/Handler API.md",
     "MySQL/Architecture",
     "MySQL/Architecture/Engine/MyISAM.md",
     "MySQL/Architecture/Engine/InnoDB.md",

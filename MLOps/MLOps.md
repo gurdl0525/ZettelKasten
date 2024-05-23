@@ -4,3 +4,6 @@ MLOps는 머신 러닝 작업(Machine Learning Operations)으로 아래 의무�
 2. 프로세스를 유지관리하고 모니터링
 
 ![[mlops-cycle.png]]
+
+
+[[Python]]
