@@ -25,10 +25,10 @@ __main__
 하지만 여기서 example2.py를 정의 해보자.
 ```python
 # example2.py
-import example.py
+import example
 
 if __name__ == '__main__':
-	out()
+	example.out()
 ```
 example2.py는 example.py의 out을 호출하고 있다.
 
