@@ -5,7 +5,7 @@ ASGL. 즉, 비동기를 사용하는 web server를 의미한다. (동기는 WSGL
 ![[ASGI.png]]
 
 
-# Async로 동작한다 await를 통해 기다린다면 의미가 있는가?
+# Async로 동작해도 await를 통해 기다린다면 의미가 있는가?
 ![[Async.png]]
 이 의문은 위 사진을 통해 해결할 수 있다.
 
@@ -73,7 +73,7 @@ E
 ```
 
 왜 이런 결과가 나왔을까?
-이는 **[[이벤트 루프]]**를 이해한다면 알 수 있다.
+이는 **[[이벤트 루프]]** 를 이해한다면 알 수 있다.
 
 이벤트 루프는 이벤트를 순회 하면서 처리한다는 것을 알 수 있다.
 
@@ -84,3 +84,46 @@ E
 위 output과 같은 결과값이 나오는 것이다.
 
 두 함수를 동시에 실행 시키려면 다음과 같은 방법이 있다.
+```python
+import asyncio  
+  
+  
+async def example2() -> int:  
+    for i in range(5):  
+        await asyncio.sleep(1)  
+        print('example2-' + str(i))  
+  
+  
+async def example():  
+    for i in range(5):  
+        await asyncio.sleep(1)  
+        print('example1-' + str(i))  
+  
+  
+async def main():  
+    await asyncio.gather(  
+        example(),  
+        example2()  
+    )  
+  
+asyncio.run(main())
+```
+
+아래 output이 실행 결과 이다.
+```
+example1-0
+example1-1
+example1-2
+example1-3
+example1-4
+example2-0
+example2-1
+example2-2
+example2-3
+example2-4
+```
+example을 event queue에 등록했으나 sleep을 통해 event를 중단하게 되면서,
+이때 event loop는 event queue에 있던 example2를 불러와 실행시킨다.
+
+다시 example2가 sleep되면, example이 event loop에 의해 실행되기 때문에
+완전한 병렬처리는 아니지만 동시에 실행이 가능하다.
