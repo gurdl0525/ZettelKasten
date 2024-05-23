@@ -11,12 +11,8 @@
             "id": "32d95a7a754c5236",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MySQL/Architecture/Handler API.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -57,7 +53,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MLOps/Python/if __name__ == '__main__'.md",
+                "file": "MySQL/MySQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -75,8 +71,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +137,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MLOps/Python/if __name__ == '__main__'.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +153,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MLOps/Python/if __name__ == '__main__'.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,9 +174,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MLOps/Python/if __name__ == '__main__'.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -204,15 +195,15 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "1e977cb70ec86f51",
+  "active": "32d95a7a754c5236",
   "lastOpenFiles": [
+    "MySQL/Architecture/Handler API.md",
+    "MySQL/MySQL.md",
+    "MLOps/Python/Python.md",
     "MLOps/Python/__init__.py.md",
     "MLOps/Python/if __name__ == '__main__'.md",
-    "MySQL/MySQL.md",
-    "MySQL/Architecture/Handler API.md",
     "MySQL/Architecture/Architecture.md",
     "MLOps/MLOps.md",
-    "MLOps/Python/Python.md",
     "img/Python Compile 과정.png",
     "MLOps/Python",
     "README.md",
