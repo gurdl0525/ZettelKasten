@@ -8,17 +8,20 @@ rootFolder
 
 ```python
 # stringLength.py
-def stringLength(inStr): return len(inStr)
+def stringLength(inStr): 
+	return len(inStr)
 ```
 
 ```python
 # stringToUpper.py
-def stringToUpper(inStr): return inStr.upper()
+def stringToUpper(inStr): 
+	return inStr.upper()
 ```
 
 ```python
 # stringToLower.py
-def stringToLower(inStr): return inStr.lower()
+def stringToLower(inStr): 
+	return inStr.lower()
 ```
 
 위 코드들을 아래처럼 사용하려면
