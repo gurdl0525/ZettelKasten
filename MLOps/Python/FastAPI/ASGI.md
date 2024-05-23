@@ -96,7 +96,7 @@ import asyncio
   
 async def example2() -> int:  
     for i in range(5):  
-        await asyncio.sleep(1)  
+        await asyncio.sleep(0.7)  
         print('example2-' + str(i))  
   
   
@@ -117,19 +117,14 @@ asyncio.run(main())
 
 아래 output이 실행 결과 이다.
 ```
-example1-0
-example1-1
-example1-2
-example1-3
-example1-4
 example2-0
+example1-0
 example2-1
+example1-1
 example2-2
 example2-3
+example1-2
 example2-4
+example1-3
+example1-4
 ```
-example을 event queue에 등록했으나 sleep을 통해 event를 중단하게 되면서,
-이때 event loop는 event queue에 있던 example2를 불러와 실행시킨다.
-
-다시 example2가 sleep되면, example이 event loop에 의해 실행되기 때문에
-완전한 병렬처리는 아니지만 동시에 실행이 가능하다.
