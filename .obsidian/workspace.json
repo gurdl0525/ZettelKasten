@@ -40,6 +40,18 @@
             }
           },
           {
+            "id": "3867879f98626e2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MLOps/Python/__init__.py.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "82fef2c8f9241604",
             "type": "leaf",
             "state": {
@@ -51,8 +63,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +129,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MLOps/Python/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +145,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MLOps/Python/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,9 +166,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MLOps/Python/Python.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -180,10 +187,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "348e1cc38dd671d4",
+  "active": "32d95a7a754c5236",
   "lastOpenFiles": [
-    "img/Python Compile 과정.png",
+    "MLOps/Python/__init__.py.md",
     "MLOps/Python/Python.md",
+    "img/Python Compile 과정.png",
     "MLOps/Python",
     "MySQL/Architecture/Architecture.md",
     "MLOps/MLOps.md",
