@@ -37,7 +37,7 @@ print(stringToLower.stringToLower(some_string))
 print(stringToUpper.stringToUpper(some_string))
 ```
 
-같은 디렉토리에 있어야 한다는 제약 조건이 있습니다.
+같은 디렉토리에 있어야 한다는 제약 조건이 있습니다. (Python 3.3 이상 부터는 사라짐)
 ```
 rootFolder 
 |-- stringLength.py
@@ -87,7 +87,7 @@ from .stringToUpper import stringToUpper
 import string_func
 
 some_string = "Hello, Universe!" 
-print(string_func.stringLength.stringLength(some_string)) 
-print(string_func.stringToLower.stringToLower(some_string)) 
-print(string_func.stringToUpper.stringToUpper(some_string))
+print(string_func.stringLength(some_string)) 
+print(string_func.stringToLower(some_string)) 
+print(string_func.stringToUpper(some_string))
 ```
