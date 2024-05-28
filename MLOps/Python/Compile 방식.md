@@ -19,3 +19,4 @@ Script 형태에서 코드를 실행할 때마다 compile, run과정을 거치�
 이를 해결하기 위해 cpython은 caching을 적용한다고 한다.
 
 ---
+[[Python3와 PyPy3]]
