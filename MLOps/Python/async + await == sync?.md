@@ -17,32 +17,49 @@
 본격적으로 async + await이 sync처럼 동작하는지 예시와 함께 알아보자.
 
 **가정**
-태스크 1과 태스크 2요청이 들어온 상황이다.
+작업 1, 작업 2 요청이 동시에 들어온 상황이다.
 
 **비동기**
 ```python
 import asyncio  
+import time  
   
   
-async def async_function_1():  
+async def task_1():  
     print('작업 1 시작')  
     await asyncio.sleep(2)  
     print('작업 1 완료')  
   
   
-async def async_function_2():  
+async def task_2():  
     print('작업 2 시작')  
     await asyncio.sleep(1)  
     print('작업 2 완료')  
   
   
 async def main():  
+    timestamp = time.time() 
+
+	# 작업 1과 2가 동시에 들어온 상황 가정
     await asyncio.gather(
-	    async_function_1(), 
-	    async_function_2()
-	)  
+        task_1(),   
+		task_2()  
+    )  
+    
     print('모든 작업 완료')  
+    print(time.time() - timestamp) 
   
   
 asyncio.run(main())
 ```
+실행 결과
+```
+작업 1 시작
+작업 2 시작
+작업 2 완료
+작업 1 완료
+모든 작업 완료
+2.0017812252044678
+```
+
+**동기**
