@@ -52,6 +52,7 @@ async def main():
   
 asyncio.run(main())
 ```
+
 실행 결과
 ```
 작업 1 시작
@@ -63,3 +64,52 @@ asyncio.run(main())
 ```
 
 **동기**
+```python
+import asyncio  
+import time  
+  
+  
+async def task_1():  
+    print('작업 1 시작')  
+    await asyncio.sleep(2)  
+    print('작업 1 완료')  
+  
+  
+async def task_2():  
+    print('작업 2 시작')  
+    await asyncio.sleep(1)  
+    print('작업 2 완료')  
+  
+  
+def sync_wrapper():  
+    timestamp = time.time()  
+
+	# 요청이 동시에 들어와도 동기는 하나씩 처리 할 수 밖에 없다.
+    asyncio.run(task_1())  
+    asyncio.run(task_2())  
+      
+    print('모든 작업 완료')  
+    print(time.time() - timestamp)  
+  
+  
+sync_wrapper()
+```
+
+실행 결과
+```
+작업 1 시작
+작업 1 완료
+작업 2 시작
+작업 2 완료
+모든 작업 완료
+3.0035829544067383
+```
+
+**차이점**
+
+| 항목 / 방식 | 비동기  | 동기   |
+| ------- | ---- | ---- |
+| 시간      | 2초   | 3초   |
+| 종료 순서   | 2, 1 | 1, 2 |
+| 실행 순서   | 1, 2 | 1, 2 |
+
