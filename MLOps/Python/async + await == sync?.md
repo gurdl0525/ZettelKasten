@@ -5,8 +5,44 @@
 어떠한 메소드가 실행 중일 때, 추가 동작(다른 메소드의 실행, 네트워크 IO등)이 발생시
 스레드의 통제권을 다음 작업으로 넘기는 것이 동기와의 차이점이다.
 
-이것만 이해해도 동기와는 무엇이 다른 것이 알 수 있을 것이다.
+### 동기는 어떻게 다른데?
+동기로 프로그램이 동작한다면 추가 동작(다른 메소드의 실행, 네트워크 IO등)이 발생해도 다음 작업을 실행할 수 없다. 
+해당 메소드가 끝날 때까지 애플리케이션 혹은 스레드 전체가 추가 동작의 종료를 기다리는 상태가 된다.
 
 ### 그럼 await이 뭔데?
 비동기 함수를 call해주고 back해주는 키워드이다.
-정확히는 Promise객체를 unwraping해주는 키워드라고 생각한다.
+정확히는 **`Promise`** 객체가 완료될 때까지 기다리고, 완료된 Promise객체의 결과 값을 반환해주는 키워드이다.
+
+### 본론
+본격적으로 async + await이 sync처럼 동작하는지 예시와 함께 알아보자.
+
+**가정**
+태스크 1과 태스크 2요청이 들어온 상황이다.
+
+**비동기**
+```python
+import asyncio  
+  
+  
+async def async_function_1():  
+    print('작업 1 시작')  
+    await asyncio.sleep(2)  
+    print('작업 1 완료')  
+  
+  
+async def async_function_2():  
+    print('작업 2 시작')  
+    await asyncio.sleep(1)  
+    print('작업 2 완료')  
+  
+  
+async def main():  
+    await asyncio.gather(
+	    async_function_1(), 
+	    async_function_2()
+	)  
+    print('모든 작업 완료')  
+  
+  
+asyncio.run(main())
+```
