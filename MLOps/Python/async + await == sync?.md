@@ -113,3 +113,4 @@ sync_wrapper()
 | 시간      | 약 2초           | 약 3초           |
 | 실행 순서   | Task 1, Task 2 | Task 1, Task 2 |
 | 종료 순서   | Task 2, Task 1 | Task 1, Task 2 |
+빠짐없이한다.
