@@ -26,6 +26,6 @@ contract Hello {
 	//   * Conditional Statement, Loop
 	//   * Function
 	//   * Error
-	//   * Event
+	//   * Event(Log)
 }
 ```
