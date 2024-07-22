@@ -1,5 +1,8 @@
 # 기본 선언
 ```Solidity
+pragma solidity 0.8.20;
+
+
 contract Hello {
 	uint public number;
 	uint private secret;
@@ -27,5 +30,6 @@ contract Hello {
 	//   * Function
 	//   * Error
 	//   * Event(Log)
+	//   * Modifier, Library, Contract Inheritance
 }
 ```
